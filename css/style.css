@@ -4,14 +4,13 @@ navbar{
     position:absolute;
     background: grey;
     width:100% ;
+
     display: flex;
     justify-content: right;
 }
 navbar>.head{
     position: fixed;
     width:100%;
-    height:10%;
-    border:1px solid black;
     align-items: center;
     justify-content: center;
     display:flex;
@@ -19,4 +18,18 @@ navbar>.head{
 .img{
     width:100px;
     height: 90px;
+}
+
+/*log in*/
+#login{
+    width:50% ;
+    height:10%;
+    border: 1px solid black;
+    font-size: 40px;
+    
+}
+.loginbutton {
+    align-items: center;
+    justify-content: center;
+    display:flex
 }
