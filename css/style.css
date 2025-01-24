@@ -1,43 +1,21 @@
 /* navbar */
-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    padding: 10px;
-    background-color: #adadad;
-}
 
-#brand-logo {
-    max-height: 90px;
-}
-
-#navbar-buttons {
+navbar{
+    position:absolute;
+    background: grey;
+    width:100% ;
     display: flex;
     justify-content: right;
+}
+navbar>.head{
+    position: fixed;
+    width:100%;
+    height:10%;
+    border:1px solid black;
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    gap: 5px;
+    justify-content: center;
+    display:flex;
 }
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-.navbar-button, #navbar-login {
-    display: flex;
-    align-items: center;
-    height: 70px;
-    font-size: 25px;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-
 .img{
     width:100px;
     height: 90px;
