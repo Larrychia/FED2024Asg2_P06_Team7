@@ -21,12 +21,13 @@ navbar>.head{
 }
 
 /*log in*/
-#login{
+.login{
     width:50% ;
     height:10%;
     border: 1px solid black;
     font-size: 40px;
-    
+    display:flex;
+    align-items: center;
 }
 .loginbutton {
     align-items: center;
