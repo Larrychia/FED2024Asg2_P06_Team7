@@ -98,16 +98,22 @@ async function login(email, password) {
   
         const emailInput = document.getElementById('signupEmail');
         const passwordInput = document.getElementById('signupPassword');
-  
-        if (emailInput && passwordInput) {
-          const email = emailInput.value;
-          const password = passwordInput.value;
-  
+        const confpw = document.getElementById('confirmPassword');
+
+
+       if (emailInput && passwordInput && confpw) {
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        const confirmPassword = confpw.value;
+        if(confirmPassword===password){
           console.log('Attempting signup with:', {email, password });
           await signup(email, password);
-        } else {
-          console.warn('Signup input fields not found.');
+        }else if(confpw!==passwordInput){
+          alert("Passwords do not match")
         }
+        else {
+          console.warn('Signup input fields not found.');
+        }}
       });
     } else {
       console.warn('Signup form not found.');
