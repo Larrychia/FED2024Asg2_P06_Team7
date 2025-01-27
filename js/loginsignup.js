@@ -7,7 +7,8 @@ async function login(email, password) {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'x-apikey': API_KEY
+          'x-apikey': API_KEY,
+          "cache-control": "no-cache"
         }
       });
   
@@ -70,7 +71,7 @@ async function login(email, password) {
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
+    const loginForm = document.getElementById('loginform');
     if (loginForm) {
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
