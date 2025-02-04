@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap - Shop Homepage v5.0.6 (https://startbootstrap.com/template/shop-homepage)
+* Start Bootstrap - Shop Item v5.0.6 (https://startbootstrap.com/template/shop-item)
 * Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-item/blob/master/LICENSE)
 */
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
@@ -10,45 +10,6 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
- navbar{
-  position:absolute;
-  background: grey;
-  width:100% ;
-
-  display: flex;
-  justify-content: right;
-}
-navbar>.head{
-  position: fixed;
-  width:100%;
-  align-items: center;
-  justify-content: center;
-  display:flex;
-}
-.img{
-  width:100px;
-  height: 90px;
-}
-
-/*log in*/
-.login{
-  width:50% ;
-  height:10%;
-  border: 1px solid black;
-  font-size: 40px;
-  display:flex;
-  align-items: center;
-}
-.loginbutton {
-  align-items: center;
-  justify-content: center;
-  display:flex
-}
-.error-message{
-  font-size: 20px;
-  font-family: "Agdasima", serif;
-} 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
