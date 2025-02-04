@@ -49,6 +49,48 @@ navbar>.head{
   font-size: 20px;
   font-family: "Agdasima", serif;
 } 
+
+.profileheading{
+  display:flex;
+  flex-wrap: wrap;
+  background-color: grey;
+  height: max-content;
+  width:100%;
+}
+
+.editprof{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  border:1px solid white;
+}
+.profilepic{
+  display:flex;
+  border: 1px solid white;
+  
+  
+}
+.profileitems{
+  display:flex;
+
+}
+.profname{
+  display:flex;
+  padding: 2% 0 0 0;
+  font-size: 25px;
+}
+.profdesc{
+  display:flex;
+  padding: 2% 0 0 0;
+  font-size: 25px;
+}
+
+
+.profileboosts{
+  
+}
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
