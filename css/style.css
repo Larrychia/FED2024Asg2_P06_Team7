@@ -61,7 +61,7 @@ navbar>.head{
 .editprof{
   display: flex;
   flex-wrap: wrap;
-  width:100%;
+  width:50%;
   border:1px solid white;
 }
 .profilepic{
@@ -76,18 +76,35 @@ navbar>.head{
 }
 .profname{
   display:flex;
-  padding: 2% 0 0 0;
-  font-size: 25px;
+  padding: 20% 0 0 0;
+  font-size: 15px;
 }
 .profdesc{
   display:flex;
-  padding: 2% 0 0 0;
-  font-size: 25px;
+  padding: 5% 0 0 0;
+  font-size: 15px;
 }
 
 
 .profileboosts{
-  
+  display:flex;
+  width:25%;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+.boosttextbox{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:2% 0 0 0;
+  font-size: 20px;
+}
+
+.profiletokenboostcss{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
