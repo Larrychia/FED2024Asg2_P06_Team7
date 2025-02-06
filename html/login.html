@@ -11,27 +11,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <navbar class="container-fluid">
-            <div class="head">
-                <h1>Mokesell</h1>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">MokeSell</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="login.html">
+                        <button type="button"><img src="../images/profile icon.png" class="img"></button>
+                    </a>
+                    <button type="button"><image src='../images/chat icon.png' class="img" ></image></button>
+                </div>
             </div>
-                <button type="'button"><image src='images/profile icon.png' class="img" ></image></button>
-                <button type="button"><image src='images/chat icon.png' class="img" ></image></button>
-        </navbar>
-        <br><br><br><br><br>
-        <form id="loginform">
-        <div class="email" >Email</div>
-        <input type="email" class="login" id="loginEmail" placeholder="Email" >
-        <br>
-        <div class="pw">Password</div>
-        <input type="password" class="login" id ="loginPassword" placeholder="Enter your password" >
-        <button type="submit" class="loginbutton">Login</button>
-        </form>
+        </nav>
+
+    <!-- Login Div -->
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="row w-100">  <!-- w-100 ensures row takes up full width of the container -->
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5"> <!-- All the col class here ensures form takes up full width on most screens and smaller ones progressively-->
+                <form id="loginform" class="p-4 border rounded">
+                    <div class="form-label">Email</div>
+                    <input type="email" class="form-control mb-3" id="loginEmail" placeholder="Email" required>
+                    <div class="form-label">Password</div>
+                    <input type="password" class="form-control mb-3" id="loginPassword" placeholder="Enter your password" required>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <div id="errorMessage" class="error-message mt-3"></div>
+                <a href="signup.html" class="d-block text-center mt-3"><strong>No account? Sign up here!</strong></a>
+            </div>
+        </div>
+    </div>
         
         
     
-    <script src="js\loginsignup.js" defer></script>
     <div id="errorMessage" class="error-message"></div>
     <a href="html/signup.html"><bold>No account? Sign up here!</bold></a>
+
+
+
+
+
+    <script src="js\loginsignup.js" defer></script>
     </body>
 </html>
