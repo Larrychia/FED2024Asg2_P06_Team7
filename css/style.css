@@ -10863,3 +10863,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* Custome Css */
+
+/* About page */
+.about-section {
+  background-color: #f8f9fa; /* Slightly gray background */
+  border: 2px solid #dee2e6; /* Slightly bigger border line */
+  padding: 1.5rem; /* Add padding inside the border */
+  border-radius: 1rem; /* Optional: Add rounded corners */
+}
