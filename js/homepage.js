@@ -38,16 +38,10 @@ function displayListings(listings) {
                         <p>$${listing.price}</p>
                     </div>
                 </div>
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="html/viewlist.html" data-listing-id="${listing._id}">View Listing</a></div>
-                </div>
+                
             </div>
         `;
-        listingElement.querySelector('a').addEventListener('click', (event) => {
-            event.preventDefault();
-            localStorage.setItem('listingid', listing._id);
-            window.location.href = 'html/viewlist.html';
-        });
+        
 
 
         listingsContainer.appendChild(listingElement);
