@@ -10937,3 +10937,33 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* Custome Css */
+
+/* About page */
+.about-section {
+  background-color: #f8f9fa; /* Slightly gray background */
+  border: 2px solid #dee2e6; /* Slightly bigger border line */
+  padding: 1.5rem; /* Add padding inside the border */
+  border-radius: 1rem; /* Optional: Add rounded corners */
+}
+
+/* Chat */
+#chatBox {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.chat-message .sender {
+  font-weight: bold;
+}
+
+.chat-message .message {
+  margin-left: 10px;
+}

@@ -23,7 +23,11 @@ async function login(email, password) {
   
       if (user) {
         alert('Login successful!');
+
+        localStorage.setItem('user', JSON.stringify(user));
+
         loginsignSuccess=true;
+
       } else {
         const errorMessageElement = document.getElementById('errorMessage');
         if (errorMessageElement) {
@@ -122,6 +126,39 @@ async function login(email, password) {
     } else {
       console.warn('Signup form not found.');
     }
+
+
+  const profileButton = document.getElementById('profileButton');
+  if (profileButton) {
+    profileButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      const user = localStorage.getItem('user');
+      if (user) {
+        window.location.href = '../index.html'; // Redirect to profile.html if logged in
+      } else {
+        window.location.href = '../html/login.html'; // Redirect to login.html if not logged in
+      }
+    });
+  } else {
+    console.warn('Profile button not found.');
+  }
+  
+  const logoutButton = document.getElementById('logoutButton');
+  if (logoutButton) {
+    logoutButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      logout(); // Call the logout function
+    });
+  } else {
+    console.warn('Logout button not found.');
+  }
+});
+
+function logout() {
+  localStorage.removeItem('user'); // Remove user information from local storage
+  window.location.href = '../html/login.html'; // Redirect to login page
+}
+=======
   });
 
   let button = document.getElementById("profileicon")
@@ -133,3 +170,4 @@ async function login(email, password) {
         
       }
   })
+
