@@ -1,3 +1,5 @@
+let loginsignSuccess = false
+
 async function login(email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
     const API_KEY = '67939028845908919c097e5e';
@@ -21,7 +23,11 @@ async function login(email, password) {
   
       if (user) {
         alert('Login successful!');
+
         localStorage.setItem('user', JSON.stringify(user));
+
+        loginsignSuccess=true;
+
       } else {
         const errorMessageElement = document.getElementById('errorMessage');
         if (errorMessageElement) {
@@ -109,6 +115,7 @@ async function login(email, password) {
         if(confirmPassword===password){
           console.log('Attempting signup with:', {email, password });
           await signup(email, password);
+          loginsignSuccess=true;
         }else if(confpw!==passwordInput){
           alert("Passwords do not match")
         }
@@ -119,6 +126,7 @@ async function login(email, password) {
     } else {
       console.warn('Signup form not found.');
     }
+
 
   const profileButton = document.getElementById('profileButton');
   if (profileButton) {
@@ -150,3 +158,16 @@ function logout() {
   localStorage.removeItem('user'); // Remove user information from local storage
   window.location.href = '../html/login.html'; // Redirect to login page
 }
+=======
+  });
+
+  let button = document.getElementById("profileicon")
+  let isloginbutton = false
+  
+  button.addEventListener('click', function(){
+      window.location.href = "../html/signup.html";
+      if(loginsignSuccess==true){
+        
+      }
+  })
+

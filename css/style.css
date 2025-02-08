@@ -11,7 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
- navbar{
+navbar{
   position:absolute;
   background: grey;
   width:100% ;
@@ -30,7 +30,79 @@ navbar>.head{
   width:100px;
   height: 90px;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.edit-button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.logout-button {
+  background-color: var(--danger-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: var(--dark-color);
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-header img {
+    margin-bottom: 10px;
+  }
+}
 /*log in*/
 .login{
   width:50% ;
@@ -49,6 +121,8 @@ navbar>.head{
   font-size: 20px;
   font-family: "Agdasima", serif;
 } 
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
