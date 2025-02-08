@@ -158,8 +158,6 @@ function logout() {
   localStorage.removeItem('user'); // Remove user information from local storage
   window.location.href = '../html/login.html'; // Redirect to login page
 }
-=======
-  });
 
   let button = document.getElementById("profileicon")
   let isloginbutton = false
