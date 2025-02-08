@@ -22,7 +22,6 @@ async function login( email, password) {
   
       if (user) {
         alert('Login successful!');
-
         localStorage.setItem('user', JSON.stringify(user));
         window.location.href = '../html/profile.html'; // Redirect to profile.html if login is successful
 

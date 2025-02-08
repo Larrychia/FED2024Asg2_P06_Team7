@@ -25,13 +25,17 @@
                         </ul>
                     </li>
                 </ul>
-                <a href="login.html" id="profileButton">
+                <a id="profileButton">
                     <button type="button"><img src="../images/profile icon.png" class="img"></button>
                 </a>
-                <button type="button"><img src='../images/chat icon.png' class="img"></button>
+                <a href="chat.html">
+                    <button type="button"><img src='../images/chat icon.png' class="img" ></button>
+                </a>
             </div>
         </div>
     </nav>
+
+    <!-- Chat Box -->
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
@@ -41,6 +45,13 @@
                 <!-- Chat messages will appear here -->
             </div>
             <div class="card-footer">
+                <div class="input-group mb-3">
+                    <select id="recipientSelect" class="form-select">
+                        <option value="User1">User1</option>
+                        <option value="User2">User2</option>
+                        <!-- Add more users as needed -->
+                    </select>
+                </div>
                 <div class="input-group">
                     <input type="text" id="chatInput" class="form-control" placeholder="Type a message...">
                     <button class="btn btn-primary" id="sendButton">Send</button>
@@ -48,7 +59,39 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.6/dist/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Footer-->
+            <footer class="py-5 bg-dark text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>About the Website</h4>
+                            <p>MokeSell is a platform for you to sell your items. We aim to provide a platform for you to sell your items easily and quickly.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Contact</h4>
+                            <p>Email: S0000000@connect.np.edu.sg</p>
+                            <p>Phone: 0000000</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="text-white">Home</a></li>
+                                <li><a href="../html/chat.html" class="text-white">Chat</a></li>
+                                <li><a href="../html/about.html" class="text-white">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col text-center">
+                            <p class="m-0">&copy; 2025 MokeSell. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/chat.js" defer></script>
+    <script src="../js/loginsignup.js" defer></script>
 </body>
 </html>
