@@ -30,7 +30,7 @@ function displayListings(listings) {
         listingElement.classList.add('col', 'mb-5');
 
         // Use default image for all listings
-        const imageUrl = 'images/image.png';
+        const imageUrl = '../images/image.png';
 
         listingElement.innerHTML = `
             <div class="card h-100">
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }); */
 
 async function viewlist() {
-    const BASE_URL = 'listing.json'; // Path to the local data.json file
+    const BASE_URL = '../listing.json'; // Path to the local data.json file
 
     try {
         const response = await fetch(BASE_URL, {
@@ -111,7 +111,7 @@ function displayListings(listings) {
         listingElement.classList.add('col', 'mb-5');
 
         // Use default image for all listings
-        const imageUrl = 'images/image.png';
+        const imageUrl = '../images/image.png';
 
         listingElement.innerHTML = `
             <div class="card h-100 listing-card">
