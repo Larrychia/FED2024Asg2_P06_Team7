@@ -242,7 +242,7 @@ async function login(email, password) {
       if (user) {
           alert('Login successful!');
           localStorage.setItem('user', JSON.stringify(user));
-          window.location.href = 'html/profile.html'; // Redirect to profile.html if login is successful
+          window.location.href = 'profile.html'; // Redirect to profile.html if login is successful
       } else {
           const errorMessageElement = document.getElementById('errorMessage');
           if (errorMessageElement) {
@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
           const user = localStorage.getItem('user');
           if (user) {
-              window.location.href = '/html/profile.html'; // Redirect to profile.html if logged in
+              window.location.href = 'FED2024Asg2_P06_Team7/html/profile.html'; // Redirect to profile.html if logged in
           } else {
-              window.location.href = '/html/login.html'; // Redirect to login.html if not logged in
+              window.location.href = 'FED2024Asg2_P06_Team7/html/login.html'; // Redirect to login.html if not logged in
           }
       });
   } else {
