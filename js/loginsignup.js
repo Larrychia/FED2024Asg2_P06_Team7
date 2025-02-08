@@ -1,6 +1,6 @@
-async function login(email, password) {
-    const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
-    const API_KEY = '67939028845908919c097e5e';
+async function login( email, password) {
+    const BASE_URL = 'https://database-90b8.restdb.io/rest/login';
+    const API_KEY = '677b36236ad1907ce53cbff9	';
   
     try {
       const response = await fetch(BASE_URL, {
@@ -17,12 +17,14 @@ async function login(email, password) {
       }
   
       const users = await response.json();
-      const user = users.find(u => u.email === email && u.password === password);
+      const user = users.find(u =>  u.email === email && u.password === password);
+      
   
       if (user) {
         alert('Login successful!');
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = '../html/profile.html'; // Redirect to profile.html after successful login
+        window.location.href = '../html/profile.html'; // Redirect to profile.html if login is successful
+
       } else {
         const errorMessageElement = document.getElementById('errorMessage');
         if (errorMessageElement) {
@@ -43,8 +45,8 @@ async function login(email, password) {
   }
   
   async function signup(email, password) {
-    const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
-    const API_KEY = '67939028845908919c097e5e';
+    const BASE_URL = 'https://database-90b8.restdb.io/rest/login';
+    const API_KEY = '677b36236ad1907ce53cbff9';
   
     try {
       const response = await fetch(BASE_URL, {
@@ -77,11 +79,12 @@ async function login(email, password) {
     if (loginForm) {
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
-  
+       
         const emailInput = document.getElementById('loginEmail');
         const passwordInput = document.getElementById('loginPassword');
   
-        if (emailInput && passwordInput) {
+        if (emailInput && passwordInput ) {
+          
           const email = emailInput.value;
           const password = passwordInput.value;
           await login(email, password);
@@ -97,19 +100,22 @@ async function login(email, password) {
     if (signupForm) {
       signupForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-  
+        
+        
         const emailInput = document.getElementById('signupEmail');
         const passwordInput = document.getElementById('signupPassword');
         const confpw = document.getElementById('confirmPassword');
 
 
-       if (emailInput && passwordInput && confpw) {
+       if (emailInput && passwordInput && confpw ) {
         const email = emailInput.value;
         const password = passwordInput.value;
         const confirmPassword = confpw.value;
+        
+
         if(confirmPassword===password){
           console.log('Attempting signup with:', {email, password });
-          await signup(email, password);
+          await signup( email, password);
           loginsignSuccess=true;
         }else if(confpw!==passwordInput){
           alert("Passwords do not match")
@@ -154,13 +160,62 @@ function logout() {
   window.location.href = '../html/login.html'; // Redirect to login page
 }
 
-  let button = document.getElementById("profileicon")
-  let isloginbutton = false
-  
-  button.addEventListener('click', function(){
-      window.location.href = "../html/signup.html";
-      if(loginsignSuccess==true){
-        
-      }
-  })
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const profileContainer = document.getElementById('profile-container');
+    const loginPrompt = document.getElementById('login-prompt');
+  
+    if (user) {
+      document.getElementById('profile-name').innerText = user.name || 'User';
+      document.getElementById('profile-email').innerText = user.email || 'User@gmail.com';
+      profileContainer.style.display = 'block';
+      loginPrompt.style.display = 'none';
+    } else {
+      profileContainer.style.display = 'none';
+      loginPrompt.style.display = 'block';
+    }
+  });
+  
+
+
+  function editProfile() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const name = prompt("Enter your name:", document.getElementById("profile-name").innerText);
+    const email = prompt("Enter your email:", document.getElementById("profile-email").innerText);
+
+
+    if (name) document.getElementById("profile-name").innerText = name;
+    if (email) document.getElementById("profile-email").innerText = email;
+
+
+    const newuser = {
+        
+        email: email || document.getElementById("profile-email").innerText,
+        password: user.password,
+        name: name || document.getElementById("profile-name").innerText,
+    };
+
+   
+    const BASE_URL = `https://database-90b8.restdb.io/rest/login/${user._id}`;
+    const API_KEY = '677b36236ad1907ce53cbff9';
+
+    fetch(BASE_URL, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-apikey': API_KEY,
+            "cache-control": "no-cache"
+        },
+        body: JSON.stringify(newuser),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert('Profile updated successfully!');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
+}
