@@ -30,7 +30,7 @@ function displayListings(listings) {
         listingElement.classList.add('col', 'mb-5');
 
         // Use default image for all listings
-        const imageUrl = '../images/image.png';
+        const imageUrl = 'images/image.png';
 
         listingElement.innerHTML = `
             <div class="card h-100">
@@ -58,7 +58,7 @@ function addToCart(listing) {
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) {
         alert('You need to be logged in to add items to your cart.');
-        window.location.href = '../html/login.html';
+        window.location.href = 'html/login.html';
         return;
     }
 
@@ -111,7 +111,7 @@ function displayListings(listings) {
         listingElement.classList.add('col', 'mb-5');
 
         // Use default image for all listings
-        const imageUrl = '../images/image.png';
+        const imageUrl = 'images/image.png';
 
         listingElement.innerHTML = `
             <div class="card h-100 listing-card">
