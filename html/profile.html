@@ -36,32 +36,26 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="profileheading">
-            
-                <div class="editprof">
-                    <div class="profileicon">
-                        <img src="../images/chat icon.png" id = "profileiconitem">
-                    </div>
-                    <div prof="profileitems">
-                        <div class="profname" id = "profilename">
-                        Name:
-                        </div>
-                        <div class="profdesc" id="profiledescription">
-                        Description:
-                        </div>
-                    </div>
-                </div>
-                <div class="profileboosts">
-                    <div class="boosttextbox" >Your token balance: </div>
-                    <div class="boosttextbox" id="boosttokenvalue">d</div>
-                    <div class="profiletokenboostcss"> <img src = "../images/profile token boost.png" width="300" height="auto"  id="profiletokenboost" ></div>
-                    
-                </div>
+         <!-- Profile Section-->
+         <div class="container">
+            <div class="profile-header">
+                <img src="../images/profile-pic.jpg" alt="Profile Picture" id="profile-pic">
+                <h1 id="profile-name">John Doe</h1>
+            </div>
+            <div class="profile-info">
+                <h2>Profile Information</h2>
+                <p><strong>Email:</strong> <span id="profile-email">john.doe@example.com</span></p>
+                <p><strong>Phone:</strong> <span id="profile-phone">+1234567890</span></p>
+                <p><strong>Address:</strong> <span id="profile-address">123 Main Street, Anytown, USA</span></p>
+            </div>
+            <button class="edit-button" onclick="editProfile()">Edit Profile</button>
+            <button class="logout-button">Logout</button>
+        </div>
                 
                 
            
            
-        </header>
+        
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
