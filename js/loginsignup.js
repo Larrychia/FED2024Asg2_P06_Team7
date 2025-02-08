@@ -88,7 +88,7 @@ async function login( email, password) {
           
           const email = emailInput.value;
           const password = passwordInput.value;
-          await login(username, email, password);
+          await login(email, password);
         } else {
           console.warn('Email or password input fields not found.');
         }
