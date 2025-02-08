@@ -1,4 +1,4 @@
-async function login(email, password) {
+async function login(username , email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
     const API_KEY = '67939028845908919c097e5e';
   
@@ -17,7 +17,8 @@ async function login(email, password) {
       }
   
       const users = await response.json();
-      const user = users.find(u => u.email === email && u.password === password);
+      const user = users.find(u => u.username===username && u.email === email && u.password === password);
+      
   
       if (user) {
         alert('Login successful!');
@@ -79,14 +80,15 @@ async function login(email, password) {
     if (loginForm) {
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
-  
+        const usernameInput = document.getElementById('loginUsername');
         const emailInput = document.getElementById('loginEmail');
         const passwordInput = document.getElementById('loginPassword');
   
-        if (emailInput && passwordInput) {
+        if (emailInput && passwordInput &&usernameInput) {
+          const username  = usernameInput.value;
           const email = emailInput.value;
           const password = passwordInput.value;
-          await login(email, password);
+          await login(username, email, password);
         } else {
           console.warn('Email or password input fields not found.');
         }
@@ -160,18 +162,27 @@ function logout() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const user = JSON.parse(localStorage.getItem('user'));
-  if (user) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const profileContainer = document.getElementById('profile-container');
+    const loginPrompt = document.getElementById('login-prompt');
+  
+    if (user) {
       document.getElementById('profile-name').innerText = user.username || 'User';
       document.getElementById('profile-email').innerText = user.email || 'john.doe@example.com';
-  } else {
-      alert('No user is logged in.');
-      window.location.href = '../html/login.html';
-  }
+      profileContainer.style.display = 'block';
+      loginPrompt.style.display = 'none';
+    } else {
+      profileContainer.style.display = 'none';
+      loginPrompt.style.display = 'block';
+    }
+  });
+  
 });
 
 
   function editProfile() {
+    const user = JSON.parse(localStorage.getItem('user'));
     const name = prompt("Enter your name:", document.getElementById("profile-name").innerText);
     const email = prompt("Enter your email:", document.getElementById("profile-email").innerText);
 
@@ -180,10 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (email) document.getElementById("profile-email").innerText = email;
 
 
-    const user = {
-        name: name || document.getElementById("profile-name").innerText,
+    const newuser = {
+        username: name || document.getElementById("profile-name").innerText,
         email: email || document.getElementById("profile-email").innerText,
-
+        password: user.password
     };
 
    
@@ -197,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'x-apikey': API_KEY,
             "cache-control": "no-cache"
         },
-        body: JSON.stringify(user),
+        body: JSON.stringify(newuser),
     })
         .then(response => response.json())
         .then(data => {
