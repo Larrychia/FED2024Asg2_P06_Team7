@@ -1,7 +1,6 @@
 async function fetchListing() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const listingId = urlParams.get('id');
-    const BASE_URL = `https://fedassignment-6e81.restdb.io/rest/listings/${listingId}`;
+    
+    const BASE_URL = `https://fedassignment-6e81.restdb.io/rest/listings/${listing._Id}`;
     const API_KEY = '67939028845908919c097e5e';
 
     try {
