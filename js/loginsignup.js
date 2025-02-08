@@ -23,7 +23,7 @@
       if (user) {
         alert('Login successful!');
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = 'html/profile.html'; // Redirect to profile.html if login is successful
+        window.location.href = '/html/profile.html'; // Redirect to profile.html if login is successful
 
       } else {
         const errorMessageElement = document.getElementById('errorMessage');
@@ -135,9 +135,9 @@
       event.preventDefault();
       const user = localStorage.getItem('user');
       if (user) {
-        window.location.href = 'html/profile.html'; // Redirect to profile.html if logged in
+        window.location.href = '/html/profile.html'; // Redirect to profile.html if logged in
       } else {
-        window.location.href = 'html/login.html'; // Redirect to login.html if not logged in
+        window.location.href = '/html/login.html'; // Redirect to login.html if not logged in
       }
     });
   } else {
@@ -157,7 +157,7 @@
 
 function logout() {
   localStorage.removeItem('user'); // Remove user information from local storage
-  window.location.href = '../html/login.html'; // Redirect to login page
+  window.location.href = '/html/login.html'; // Redirect to login page
 }
 
 
@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
           const user = localStorage.getItem('user');
           if (user) {
-              window.location.href = 'profile.html'; // Redirect to profile.html if logged in
+              window.location.href = '/html/profile.html'; // Redirect to profile.html if logged in
           } else {
-              window.location.href = 'login.html'; // Redirect to login.html if not logged in
+              window.location.href = '/html/login.html'; // Redirect to login.html if not logged in
           }
       });
   } else {
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function logout() {
   localStorage.removeItem('user'); // Remove user information from local storage
-  window.location.href = 'html/login.html'; // Redirect to login page
+  window.location.href = '/html/login.html'; // Redirect to login page
 }
 
 document.addEventListener('DOMContentLoaded', () => {
