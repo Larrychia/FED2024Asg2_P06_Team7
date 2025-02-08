@@ -1,6 +1,6 @@
 async function login( email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
-    const API_KEY = '67939028845908919c097e5e';
+    const API_KEY = '677b36236ad1907ce53cbff9	';
   
     try {
       const response = await fetch(BASE_URL, {
@@ -161,15 +161,15 @@ function logout() {
   window.location.href = '../html/login.html'; // Redirect to login page
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+
   document.addEventListener('DOMContentLoaded', () => {
     const user = JSON.parse(localStorage.getItem('user'));
     const profileContainer = document.getElementById('profile-container');
     const loginPrompt = document.getElementById('login-prompt');
   
     if (user) {
-      document.getElementById('profile-name').innerText = user.username || 'User';
-      document.getElementById('profile-email').innerText = user.email || 'john.doe@example.com';
+      document.getElementById('profile-name').innerText = user.name || 'User';
+      document.getElementById('profile-email').innerText = user.email || 'User@gmail.com';
       profileContainer.style.display = 'block';
       loginPrompt.style.display = 'none';
     } else {
@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-});
 
 
   function editProfile() {
@@ -192,9 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const newuser = {
-        username: name || document.getElementById("profile-name").innerText,
+        
         email: email || document.getElementById("profile-email").innerText,
-        password: user.password
+        password: user.password,
+        name: name || document.getElementById("profile-name").innerText,
     };
 
    

@@ -1,6 +1,6 @@
 async function viewlist() {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/listings';
-    const API_KEY = '67939028845908919c097e5e';
+    const API_KEY = '677b36236ad1907ce53cbff9';
 
     try {
         const response = await fetch(BASE_URL, {
@@ -10,7 +10,6 @@ async function viewlist() {
                 "cache-control": "no-cache"
             }
         });
-
         if (!response.ok) {
             throw new Error(`Error: ${response.status}`);
         }
@@ -29,11 +28,9 @@ function displayListings(listings) {
         const listingElement = document.createElement('div');
         listingElement.classList.add('col', 'mb-5');
 
-        let image = `https://fedassignment-6e81.restdb.io/media/${listing.image}`;
-        console.log("image url:" +image);
+       
         listingElement.innerHTML = `
             <div class="card h-100">
-                <img class="card-img-top" src="${image}" alt="${listing.title}" />
                 <div class="card-body p-4">
                     <div class="text-center">
                         <h5 class="fw-bolder">${listing.name}</h5>

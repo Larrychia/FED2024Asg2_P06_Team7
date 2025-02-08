@@ -6,6 +6,7 @@ async function fetchListing() {
 
     try {
         const response = await fetch(BASE_URL, {
+            
             headers: {
                 "content-type": "application/json",
                 "x-apikey": API_KEY,
