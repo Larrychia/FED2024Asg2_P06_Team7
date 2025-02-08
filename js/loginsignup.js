@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
           const user = localStorage.getItem('user');
           if (user) {
-              window.location.href = 'https://larrychia.github.io/FED2024Asg2_P06_Team7/html/profile.html'; // Redirect to profile.html if logged in
+              window.location.href = 'profile.html'; // Redirect to profile.html if logged in
           } else {
-              window.location.href = 'https://larrychia.github.io/FED2024Asg2_P06_Team7/html/login.html'; // Redirect to login.html if not logged in
+              window.location.href = 'login.html'; // Redirect to login.html if not logged in
           }
       });
   } else {
