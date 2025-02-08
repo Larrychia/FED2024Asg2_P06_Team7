@@ -1,0 +1,26 @@
+{
+    "users": [
+      {
+        "_id": "67a773dc4779de1b0002a597",
+        "password": "password",
+        "email": "email@gmail.com",
+        "_created": "2025-02-08T15:10:20.234Z",
+        "_changed": "2025-02-08T16:29:09.266Z",
+        "_createdby": "api",
+        "_changedby": "api",
+        "_version": 6,
+        "cartitems": [
+          {
+            "_id": "67a722394779de1b00029c97",
+            "description": "carr",
+            "name": "car",
+            "price": 10,
+            "owneremail": "123@gmail.com",
+            "_created": "2025-02-08T09:22:01.466Z",
+            "_changed": "2025-02-08T09:22:01.466Z"
+          }
+        ],
+        "token": 3100
+      }
+    ]
+  }
