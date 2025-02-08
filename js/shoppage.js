@@ -50,8 +50,6 @@ function displayListings(listings) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', viewlist);
-
 
 async function addToCart(listing) {
     const user = JSON.parse(localStorage.getItem('user'));
