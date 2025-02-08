@@ -1,4 +1,4 @@
-async function login(username , email, password) {
+async function login( email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
     const API_KEY = '67939028845908919c097e5e';
   
@@ -17,7 +17,7 @@ async function login(username , email, password) {
       }
   
       const users = await response.json();
-      const user = users.find(u => u.username===username && u.email === email && u.password === password);
+      const user = users.find(u =>  u.email === email && u.password === password);
       
   
       if (user) {
@@ -45,7 +45,7 @@ async function login(username , email, password) {
     }
   }
   
-  async function signup(username,email, password) {
+  async function signup(email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
     const API_KEY = '67939028845908919c097e5e';
   
@@ -57,7 +57,7 @@ async function login(username , email, password) {
           'x-apikey': API_KEY,
           "Cache-Control": "no-cache"
         },
-        body: JSON.stringify({username ,email, password }),
+        body: JSON.stringify({email, password }),
       });
   
       if (response.ok) {
@@ -80,12 +80,12 @@ async function login(username , email, password) {
     if (loginForm) {
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
-        const usernameInput = document.getElementById('loginUsername');
+       
         const emailInput = document.getElementById('loginEmail');
         const passwordInput = document.getElementById('loginPassword');
   
-        if (emailInput && passwordInput &&usernameInput) {
-          const username  = usernameInput.value;
+        if (emailInput && passwordInput ) {
+          
           const email = emailInput.value;
           const password = passwordInput.value;
           await login(username, email, password);
@@ -102,21 +102,21 @@ async function login(username , email, password) {
       signupForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         
-        const signupUsername = document.getElementById('signupUsername');
+        
         const emailInput = document.getElementById('signupEmail');
         const passwordInput = document.getElementById('signupPassword');
         const confpw = document.getElementById('confirmPassword');
 
 
-       if (emailInput && passwordInput && confpw && signupUsername) {
+       if (emailInput && passwordInput && confpw ) {
         const email = emailInput.value;
         const password = passwordInput.value;
         const confirmPassword = confpw.value;
-        const username = signupUsername.value;
+        
 
         if(confirmPassword===password){
-          console.log('Attempting signup with:', {username ,email, password });
-          await signup(username, email, password);
+          console.log('Attempting signup with:', {email, password });
+          await signup( email, password);
           loginsignSuccess=true;
         }else if(confpw!==passwordInput){
           alert("Passwords do not match")

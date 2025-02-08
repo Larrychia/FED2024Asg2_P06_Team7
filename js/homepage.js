@@ -42,7 +42,7 @@ function displayListings(listings) {
                     </div>
                 </div>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="listing.html?id=${listing._id}">View Listing</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="viewlist.html?id=${listing._id}">View Listing</a></div>
                 </div>
             </div>
         `;
