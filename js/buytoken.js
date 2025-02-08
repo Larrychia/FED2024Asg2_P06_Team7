@@ -22,7 +22,7 @@ async function addTokens(amount) {
 
     const updatedUser = {
         ...user,
-        tokens: (user.tokens || 0) + amount
+        token: (user.token || 0) + amount
     };
 
     try {
