@@ -17,8 +17,8 @@ async function addTokens(amount) {
         return;
     }
 
-    const BASE_URL = `https://fedassignment-6e81.restdb.io/rest/login/${user._id}`;
-    const API_KEY = '67939028845908919c097e5e';
+    const BASE_URL = `https://database-90b8.restdb.io/rest/login/${user._id}`;
+    const API_KEY = '677b36236ad1907ce53cbff9';
 
     const updatedUser = {
         ...user,
