@@ -44,7 +44,7 @@ async function login(email, password) {
     }
   }
   
-  async function signup(email, password) {
+  async function signup(username,email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
     const API_KEY = '67939028845908919c097e5e';
   
@@ -56,7 +56,7 @@ async function login(email, password) {
           'x-apikey': API_KEY,
           "Cache-Control": "no-cache"
         },
-        body: JSON.stringify({email, password }),
+        body: JSON.stringify({username ,email, password }),
       });
   
       if (response.ok) {
@@ -99,19 +99,22 @@ async function login(email, password) {
     if (signupForm) {
       signupForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-  
+        
+        const signupUsername = document.getElementById('signupUsername');
         const emailInput = document.getElementById('signupEmail');
         const passwordInput = document.getElementById('signupPassword');
         const confpw = document.getElementById('confirmPassword');
 
 
-       if (emailInput && passwordInput && confpw) {
+       if (emailInput && passwordInput && confpw && signupUsername) {
         const email = emailInput.value;
         const password = passwordInput.value;
         const confirmPassword = confpw.value;
+        const username = signupUsername.value;
+
         if(confirmPassword===password){
-          console.log('Attempting signup with:', {email, password });
-          await signup(email, password);
+          console.log('Attempting signup with:', {username ,email, password });
+          await signup(username, email, password);
           loginsignSuccess=true;
         }else if(confpw!==passwordInput){
           alert("Passwords do not match")
@@ -156,13 +159,53 @@ function logout() {
   window.location.href = '../html/login.html'; // Redirect to login page
 }
 
-  let button = document.getElementById("profileicon")
-  let isloginbutton = false
-  
-  button.addEventListener('click', function(){
-      window.location.href = "../html/signup.html";
-      if(loginsignSuccess==true){
-        
-      }
-  })
+document.addEventListener('DOMContentLoaded', () => {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (user) {
+      document.getElementById('profile-name').innerText = user.username || 'User';
+      document.getElementById('profile-email').innerText = user.email || 'john.doe@example.com';
+  } else {
+      alert('No user is logged in.');
+      window.location.href = '../html/login.html';
+  }
+});
 
+
+  function editProfile() {
+    const name = prompt("Enter your name:", document.getElementById("profile-name").innerText);
+    const email = prompt("Enter your email:", document.getElementById("profile-email").innerText);
+
+
+    if (name) document.getElementById("profile-name").innerText = name;
+    if (email) document.getElementById("profile-email").innerText = email;
+
+
+    const user = {
+        name: name || document.getElementById("profile-name").innerText,
+        email: email || document.getElementById("profile-email").innerText,
+
+    };
+
+   
+    const BASE_URL = `https://fedassignment-6e81.restdb.io/rest/login/${user._id}`;
+    const API_KEY = '67939028845908919c097e5e';
+
+    fetch(BASE_URL, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-apikey': API_KEY,
+            "cache-control": "no-cache"
+        },
+        body: JSON.stringify(user),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert('Profile updated successfully!');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
+}
