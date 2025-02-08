@@ -48,17 +48,17 @@
         </div>
     </nav>
 
-        <!-- Header-->
-         <!-- Profile Section-->
-         <div class="container">
+    <!-- Header-->
+    <!-- Profile Section -->
+    <div class="container">
+        <div class="profile-section">
             <div class="profile-header">
-                <img src="../images/profile-pic.jpg" alt="Profile Picture" id="profile-pic">
+                <img src="../images/profile icon.png" alt="Profile Picture" id="profile-pic">
                 <h1 id="profile-name"></h1>
             </div>
             <div class="profile-info">
                 <h2>Profile Information</h2>
                 <p><strong>Email:</strong> <span id="profile-email"></span></p>
-                
             </div>
             <button class="edit-button" onclick="editProfile()">Edit Profile</button>
             <button type="button" class="logout-button" id="logoutButton">Logout</button>
@@ -71,49 +71,51 @@
             </div>
         </div>
     </div>
-        <div id="login-prompt" style="display: none;">
-            <p>No user is logged in. Please <a href="../html/login.html">log in</a> to view your profile.</p>
-          </div>
-        <!-- Create Listing Modal -->
-        <div class="modal fade" id="createListingModal" tabindex="-1" aria-labelledby="createListingModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="createListingModalLabel">Create Listing</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="createListingForm">
-                            <div class="mb-3">
-                                <label for="listingName" class="form-label">Listing Name</label>
-                                <input type="text" class="form-control" id="listingName" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="listingDescription" class="form-label">Description</label>
-                                <textarea class="form-control" id="listingDescription" rows="3" required></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="listingPrice" class="form-label">Price</label>
-                                <input type="number" class="form-control" id="listingPrice" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Create Listing</button>
-                        </form>
-                    </div>
+    <div id="login-prompt" style="display: none;">
+        <p>No user is logged in. Please <a href="../html/login.html">log in</a> to view your profile.</p>
+    </div>
+
+
+    <!-- Create Listing Modal -->
+    <div class="modal fade" id="createListingModal" tabindex="-1" aria-labelledby="createListingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createListingModalLabel">Create Listing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createListingForm">
+                        <div class="mb-3">
+                            <label for="listingName" class="form-label">Listing Name</label>
+                            <input type="text" class="form-control" id="listingName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="listingDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="listingPrice" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="listingPrice" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Listing</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
                 
            
            
         
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <!-- Listings will be dynamically inserted here by viewlist.js -->
-                </div>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- Listings will be dynamically inserted here by viewlist.js -->
             </div>
-        </section>
+        </div>
+    </section>
             
     <!-- Footer-->
     <footer class="py-5 bg-dark text-white">
@@ -151,5 +153,6 @@
         <script src="js/homepage.js"></script>
         <script src="../js/loginsignup.js"></script>
         <script src="../js/shoppage.js" defer></script>
+        <script src="../js/profile.js"></script>
     </body>
 </html>
