@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="Larry and Kai Sheng">
-        <meta name="index" content="Home">
-        <meta name="date created" content="15 jan 2025">
-        <title>Home</title>
-        <link rel="stylesheet" href="..\css\style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="/index.html">MokeSell</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="shoppage.html">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                
-                                
-                            </ul>
-                        </li>
-                    </ul>
-                    <a id="profileButton">
-                        <button type="button"><img src="../images/profile icon.png" class="img"></button>
-                    </a>
-                    <a href="chat.html">
-                        <button type="button"><img src='../images/chat icon.png' class="img" ></button>
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Signup Div -->
-        <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-            <div class="row w-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <form id="signup" class="p-4 border rounded">
-                        
-                        <div class="form-label">Email</div>
-                        <input type="email" class="form-control mb-3" id="signupEmail" placeholder="Email" required>
-                        <div class="form-label">Password</div>
-                        <input type="password" class="form-control mb-3" id="signupPassword" placeholder="Enter your password" required>
-                        <div class="form-label">Confirm Password</div>
-                        <input type="password" class="form-control mb-3" id="confirmPassword" placeholder="Enter your password again" required>
-                        <button type="submit" class="btn btn-primary w-100">Sign up</button>
-                    </form>
-                    <div id="errorMessage" class="error-message mt-3"></div>
-                    <a href="login.html" class="d-block text-center mt-3"><strong>Already have an account? Login here!</strong></a>
+<head>
+    <meta charset="utf-8">
+    <meta name="Larry and Kai Sheng">
+    <meta name="index" content="Home">
+    <meta name="date created" content="15 jan 2025">
+    <title>Home</title>
+    <link rel="stylesheet" href="..\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a id="profileButton" class="me-3">
+                <button type="button"><img src="../images/profile icon.png" class="img"></button>
+            </a>
+            <a href="chat.html" class="me-3">
+                <button type="button"><img src='../images/chat icon.png' class="img" ></button>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="shoppage.html">All Products</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="buytoken.html">Buy tokens</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex ms-auto align-items-center">
+                    <div class="d-flex flex-column align-items-left">
+                        <a class="navbar-brand" href="../index.html">MokeSell</a>
+                        <a href="cart.html" class="btn btn-outline-dark mt-2">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cartCount">0</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Signup Div -->
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="row w-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <form id="signup" class="p-4 border rounded">
+                    
+                    <div class="form-label">Email</div>
+                    <input type="email" class="form-control mb-3" id="signupEmail" placeholder="Email" required>
+                    <div class="form-label">Password</div>
+                    <input type="password" class="form-control mb-3" id="signupPassword" placeholder="Enter your password" required>
+                    <div class="form-label">Confirm Password</div>
+                    <input type="password" class="form-control mb-3" id="confirmPassword" placeholder="Enter your password again" required>
+                    <button type="submit" class="btn btn-primary w-100">Sign up</button>
+                </form>
+                <div id="errorMessage" class="error-message mt-3"></div>
+                <a href="login.html" class="d-block text-center mt-3"><strong>Already have an account? Login here!</strong></a>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer-->
     <footer class="py-5 bg-dark text-white">

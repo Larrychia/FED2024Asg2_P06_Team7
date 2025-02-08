@@ -11,12 +11,17 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="../index.html">MokeSell</a>
+            <a id="profileButton" class="me-3">
+                <button type="button"><img src="../images/profile icon.png" class="img"></button>
+            </a>
+            <a href="chat.html" class="me-3">
+                <button type="button"><img src='../images/chat icon.png' class="img" ></button>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../html/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -26,13 +31,20 @@
                         </ul>
                     </li>
                 </ul>
-                <a id="profileButton">
-                    <button type="button"><img src="../images/profile icon.png" class="img"></button>
-                </a>
-                <button type="button"><image src='../images/chat icon.png' class="img" ></image></button>
+                <div class="d-flex ms-auto align-items-center">
+                    <div class="d-flex flex-column align-items-left">
+                        <a class="navbar-brand" href="../index.html">MokeSell</a>
+                        <a href="cart.html" class="btn btn-outline-dark mt-2">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
+
     <!-- Transaction History Section-->
     <div class="container my-5">
         <h1 class="text-center mb-4">Transaction History</h1>

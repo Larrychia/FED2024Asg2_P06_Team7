@@ -10940,6 +10940,11 @@ textarea.form-control-lg {
 
 /* Custome Css */
 
+/* Navbar */
+.navbar-nav .nav-link, .navbar-brand, .btn-outline-dark {
+  font-size: 1.25rem; /* Increase font size */
+}
+
 /* About page */
 .about-section {
   background-color: #f8f9fa; /* Slightly gray background */
