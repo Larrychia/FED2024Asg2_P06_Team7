@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }); */
 
 async function viewlist() {
-    const BASE_URL = 'https://larrychia.github.io/FED2024Asg2_P06_Team7/listing.json'; // Path to the local data.json file
+    const BASE_URL = 'listing.json'; // Path to the local data.json file
 
     try {
         const response = await fetch(BASE_URL, {
@@ -111,7 +111,7 @@ function displayListings(listings) {
         listingElement.classList.add('col', 'mb-5');
 
         // Use default image for all listings
-        const imageUrl = 'https://larrychia.github.io/FED2024Asg2_P06_Team7/images/image.png';
+        const imageUrl = 'images/image.png';
 
         listingElement.innerHTML = `
             <div class="card h-100 listing-card">
