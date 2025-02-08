@@ -1,20 +1,25 @@
+const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/messages';
+const API_KEY = '67939028845908919c097e5e';
+
 document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chatBox');
     const chatInput = document.getElementById('chatInput');
     const sendButton = document.getElementById('sendButton');
     const recipientSelect = document.getElementById('recipientSelect');
 
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+        alert('You must be logged in to view the chat.');
+        window.location.href = '../html/login.html'; // Redirect to login page if not logged in
+        return;
+    }
+
     sendButton.addEventListener('click', () => {
         const message = chatInput.value.trim();
         const recipient = recipientSelect.value;
         if (message && recipient) {
-            const user = JSON.parse(localStorage.getItem('user'));
-            if (user) {
-                sendMessage(user.email, recipient, message);
-                chatInput.value = '';
-            } else {
-                alert('You must be logged in to send a message.');
-            }
+            sendMessage(user.email, recipient, message);
+            chatInput.value = '';
         }
     });
 
