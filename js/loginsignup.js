@@ -1,5 +1,3 @@
-let loginsignSuccess = false
-
 async function login(email, password) {
     const BASE_URL = 'https://fedassignment-6e81.restdb.io/rest/login';
     const API_KEY = '67939028845908919c097e5e';
@@ -23,11 +21,8 @@ async function login(email, password) {
   
       if (user) {
         alert('Login successful!');
-
         localStorage.setItem('user', JSON.stringify(user));
-
-        loginsignSuccess=true;
-
+        window.location.href = '../html/profile.html'; // Redirect to profile.html after successful login
       } else {
         const errorMessageElement = document.getElementById('errorMessage');
         if (errorMessageElement) {
@@ -134,7 +129,7 @@ async function login(email, password) {
       event.preventDefault();
       const user = localStorage.getItem('user');
       if (user) {
-        window.location.href = '../index.html'; // Redirect to profile.html if logged in
+        window.location.href = '../html/profile.html'; // Redirect to profile.html if logged in
       } else {
         window.location.href = '../html/login.html'; // Redirect to login.html if not logged in
       }
