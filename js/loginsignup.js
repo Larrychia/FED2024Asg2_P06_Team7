@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
           const user = localStorage.getItem('user');
           if (user) {
-              window.location.href = '/html/profile.html'; // Redirect to profile.html if logged in
+              window.location.href = 'html/profile.html'; // Redirect to profile.html if logged in
           } else {
-              window.location.href = '/html/login.html'; // Redirect to login.html if not logged in
+              window.location.href = 'html/login.html'; // Redirect to login.html if not logged in
           }
       });
   } else {

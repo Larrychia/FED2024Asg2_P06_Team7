@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }); */
 
 async function viewlist() {
-    const BASE_URL = '../listing.json'; // Path to the local data.json file
+    const BASE_URL = 'listing.json'; // Path to the local data.json file
 
     try {
         const response = await fetch(BASE_URL, {
