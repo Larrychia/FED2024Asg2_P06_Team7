@@ -219,7 +219,7 @@ function logout() {
             alert('An error occurred. Please try again.');
         });
 }
-/*
+/* for JSON usage when restdb is down
 async function login(email, password) {
   const BASE_URL = '../login.json'; // Path to the local login.json file
 
