@@ -1,4 +1,4 @@
-/*async function viewlist() {
+async function viewlist() {
     const BASE_URL = 'https://database-90b8.restdb.io/rest/listings';
     const API_KEY = '677b36236ad1907ce53cbff9';
 
@@ -78,8 +78,8 @@ function updateCartCount() {
 document.addEventListener('DOMContentLoaded', () => {
     viewlist();
     updateCartCount();
-}); */
-
+});
+/* for json usage when restdb is down
 async function viewlist() {
     const BASE_URL = '../listing.json'; // Path to the local data.json file
 
@@ -159,4 +159,4 @@ function updateCartCount() {
 document.addEventListener('DOMContentLoaded', () => {
     viewlist();
     updateCartCount();
-});
+}); */

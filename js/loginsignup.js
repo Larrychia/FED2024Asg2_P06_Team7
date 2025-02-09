@@ -1,4 +1,4 @@
-/* async function login( email, password) {
+async function login( email, password) {
     const BASE_URL = 'https://database-90b8.restdb.io/rest/login';
     const API_KEY = '677b36236ad1907ce53cbff9	';
   
@@ -23,7 +23,7 @@
       if (user) {
         alert('Login successful!');
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = '/html/profile.html'; // Redirect to profile.html if login is successful
+        window.location.href = 'profile.html'; // Redirect to profile.html if login is successful
 
       } else {
         const errorMessageElement = document.getElementById('errorMessage');
@@ -135,9 +135,9 @@
       event.preventDefault();
       const user = localStorage.getItem('user');
       if (user) {
-        window.location.href = '/html/profile.html'; // Redirect to profile.html if logged in
+        window.location.href = 'profile.html'; // Redirect to profile.html if logged in
       } else {
-        window.location.href = '/html/login.html'; // Redirect to login.html if not logged in
+        window.location.href = 'login.html'; // Redirect to login.html if not logged in
       }
     });
   } else {
@@ -157,7 +157,7 @@
 
 function logout() {
   localStorage.removeItem('user'); // Remove user information from local storage
-  window.location.href = '/html/login.html'; // Redirect to login page
+  window.location.href = 'login.html'; // Redirect to login page
 }
 
 
@@ -219,7 +219,7 @@ function logout() {
             alert('An error occurred. Please try again.');
         });
 }
-*/
+/*
 async function login(email, password) {
   const BASE_URL = '../login.json'; // Path to the local login.json file
 
@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
           const user = localStorage.getItem('user');
           if (user) {
-              window.location.href = 'FED2024Asg2_P06_Team7/html/profile.html'; // Redirect to profile.html if logged in
+              window.location.href = 'profile.html'; // Redirect to profile.html if logged in
           } else {
-              window.location.href = 'FED2024Asg2_P06_Team7/html/login.html'; // Redirect to login.html if not logged in
+              window.location.href = 'login.html'; // Redirect to login.html if not logged in
           }
       });
   } else {
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function logout() {
   localStorage.removeItem('user'); // Remove user information from local storage
-  window.location.href = '/html/login.html'; // Redirect to login page
+  window.location.href = 'login.html'; // Redirect to login page
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -426,3 +426,4 @@ function editProfile() {
 
   alert('Profile updated successfully!');
 }
+*/

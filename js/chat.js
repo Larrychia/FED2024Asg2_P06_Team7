@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) {
         alert('You must be logged in to view the chat.');
-        window.location.href = '../html/login.html'; // Redirect to login page if not logged in
+        window.location.href = 'login.html'; // Redirect to login page if not logged in
         return;
     }
 
