@@ -33,7 +33,7 @@ function displayListings(listings) {
         const imageUrl = 'images/image.png';
 
         listingElement.innerHTML = `
-            <div class="card h-100">
+            <div class="card h-100 listing-card">
                 <img class="card-img-top" src="${imageUrl}" alt="${listing.name}" />
                 <div class="card-body p-4">
                     <div class="text-center">
