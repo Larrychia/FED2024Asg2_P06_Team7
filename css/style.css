@@ -11045,3 +11045,23 @@ textarea.form-control-lg {
 #user-listings h2 {
   text-align: center; /* Center the "Your Listings" heading */
 }
+
+/* lottie */
+<style>
+#loadingAnimation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+#loadingAnimation.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
