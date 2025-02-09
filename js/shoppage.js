@@ -30,7 +30,7 @@ function displayListings(listings) {
         listingElement.classList.add('col', 'mb-5');
 
         // Use default image for all listings
-        const imageUrl = '../images/image.png';
+        const imageUrl = 'images/image.png';
 
         listingElement.innerHTML = `
             <div class="card h-100">
