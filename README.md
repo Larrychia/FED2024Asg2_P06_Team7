@@ -1,8 +1,8 @@
 # FED2024Asg2_P06_Team7 
 Introducing the new and upcomming trading marketplace platform , Mokesell ! Here at mokesell , we offer users a easy to use and a cheap marketplace for users to sell and buy items ! Users from all ages are welcomed , be it the younger generation , the working adults or the elderly . Age is not a limitation to our platform since it is that easy to navigate to each page of our platform . Users are welcomed to place anything on the marketplace that they deem worthy to be sold or wanted by others , as long as it is appropriate.
 
-## Design 
-Process During the project of designing our website , we constantly reminded and ask ourselves while implementing features , is this easy to use and will users want to use it ? There is no point of implementing a feature if it is too hard for users to learn how to use it or if it is not good. Our aim for our platform is to make a marketplace that is easily accessible and easy to navigate , on top of being a good feature that would enable customers to also easily sell and promote their own items.
+## Design Process 
+During the project of designing our website , we constantly reminded and ask ourselves while implementing features , is this easy to use and will users want to use it ? There is no point of implementing a feature if it is too hard for users to learn how to use it or if it is not good. Our aim for our platform is to make a marketplace that is easily accessible and easy to navigate , on top of being a good feature that would enable customers to also easily sell and promote their own items.
 
 For example , a seller on a marketplace like us , they would want the platform to be easy to navigate such that they can easily add their own items that they want to sell . Furthermore , they also want it to be able to display it on the marketplace for users to buy , afterall , placing a listing on the marketplace in the first place is to enable it to be sold . Buyers who access our platform will find it easy to use and buy items as it is very obviously highlighted across our page and can check the relative details of the items displayed on their screen
 
