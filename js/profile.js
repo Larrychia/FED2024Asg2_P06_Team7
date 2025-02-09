@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('logoutButton').addEventListener('click', () => {
         localStorage.removeItem('user');
-        window.location.href = '../html/login.html';
+        window.location.href = 'login.html';
     });
 
 fetchUserListings(); // Fetch and display the user's listings on page load

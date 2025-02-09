@@ -58,7 +58,7 @@ function addToCart(listing) {
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) {
         alert('You need to be logged in to add items to your cart.');
-        window.location.href = 'html/login.html';
+        window.location.href = 'login.html';
         return;
     }
 
