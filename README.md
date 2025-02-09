@@ -41,3 +41,7 @@ We took inspiration from carousell for our features such that our chat and profi
 ## Link to our project 
 [https://larrychia.github.io/FED2024Asg2_P06_Team7/]
 [https://drive.google.com/file/d/18t9S9VoxG8Czi1MC5Zzjvv_Z6QmPt1z7/view?usp=sharing]
+
+## Small issues
+1. RestDB requires setting up something for pictures and highly unreliable
+2. We didn't use alot of listing so it may appear small
