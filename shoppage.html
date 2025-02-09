@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/style.css" rel="stylesheet"/>
+    <!-- LottieFiles Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" defer></script>
 </head>
 <body>
     <!-- Navigation-->
@@ -48,9 +50,15 @@
         </div>
     </nav>
 
+    <!-- Loading Animation -->
+    <div id="loadingAnimation" class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+        <div id="lottieAnimation" style="width: 300px; height: 300px;"></div>
+    </div>
+
     <!-- Listings -->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="text-center mb-4">All Products</h2> <!-- Added heading here -->
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <!-- Listings will be dynamically inserted here by shoppage.js -->
             </div>
@@ -66,16 +74,20 @@
                     <p>MokeSell is a platform for you to sell your items. We aim to provide a platform for you to sell your items easily and quickly.</p>
                 </div>
                 <div class="col-md-4">
-                    <h4>Contact</h4>
-                    <p>Email: S0000000@connect.np.edu.sg</p>
-                    <p>Phone: 0000000</p>
+                    <h4>Contact Us</h4>
+                    <h6>Kai Sheng</h6>
+                    <p>Email: S10268302@connect.np.edu.sg</p>
+                    <p>Phone: 96680853</p>
+                    <h6>Larry</h6>
+                    <p>Email: S10259006@connect.np.edu.sg</p>
+                    <p>Phone: 97266374</p>
                 </div>
                 <div class="col-md-4">
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="../html/chat.html" class="text-white">Chat</a></li>
-                        <li><a href="../html/about.html" class="text-white">About</a></li>
+                        <li><a href="chat.html" class="text-white">Chat</a></li>
+                        <li><a href="about.html" class="text-white">About(Feedback located in About)</a></li>
                     </ul>
                 </div>
             </div>
