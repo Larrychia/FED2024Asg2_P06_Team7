@@ -39,4 +39,5 @@ Diplays all listings that have been made on our platform . Shop page further on 
 We took inspiration from carousell for our features such that our chat and profile is slightly similar to how carousell functions . It allowed us to simplify things and work on things quicker as we had an idea on where to start from
 
 ## Link to our project 
-https://larrychia.github.io/FED2024Asg2_P06_Team7/
+[https://larrychia.github.io/FED2024Asg2_P06_Team7/]
+[https://drive.google.com/file/d/18t9S9VoxG8Czi1MC5Zzjvv_Z6QmPt1z7/view?usp=sharing]
